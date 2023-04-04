@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+    let myModule = {
+      data: 'hello world',
+      foo() {
+        console.log(`foo() ${this.data}`)
+      },
+    }
+    myModule.foo() 
+    myModule.data = 'hello world everyone' 
+    myModule.foo() 
+  </script> -->
+
+  <script type="text/javascript" src="module.js"></script>
+  <script type="text/javascript">
+      myModule.foo()
+      console.log(myModule.data)  // undefined 不能访问模块内部数据
+      myModule.data = 'hello world everyone' // 不是修改的模块内部的data
+      myModule.foo()  // 没有改变
+  </script>
+
+  <!-- <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="module.js"></script>
+  <script type="text/javascript">
+    myModule.foo()
+  </script> -->
+
+</body>
+</html>
